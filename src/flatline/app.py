@@ -1,7 +1,9 @@
 
 from textual.app import App
-from textual.widgets import Header, Footer, ListView, Label
+from textual.widgets import Header, Footer, Label
 from textual.containers import Container
+
+from flatline.command_line import CommandLine
 
 try:
     from zoautil_py import zsystem # type: ignore
@@ -27,5 +29,5 @@ class Flatline(App):
             if zoau_enabled:
                 yield Label(f"You are working on the {system_name} mainframe system in LPAR {lpar_name}")
             yield Header()
-            yield ListView()
+            yield CommandLine()
             yield Footer()
