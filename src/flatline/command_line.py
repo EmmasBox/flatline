@@ -32,7 +32,7 @@ def generate_command_meta_header(command):
     \n
     """
 
-class CommandLine(Container):
+class CommandLine(HorizontalGroup):
     def compose(self) -> ComposeResult:
         yield Select(options=[("TSO", "TSO"),("MVS", "MVS"),("OPER", "OPER")],value="TSO",id="command_mode")
-        yield Input(id="cli",max_length=250,placeholder="Submit a command...",classes="commands",tooltip="Use this command field to submit commands. You can view the output in the command history panel")
+        yield Input(id="cli",max_length=250,placeholder="Submit a command...",classes="command-field",tooltip="Use this command field to submit commands. You can view the output in the command history panel")
