@@ -18,6 +18,9 @@ if zoau_enabled:
     lpar_name = zsystem_info["sys_info"]["lpar_name"]
 
 class Flatline(App):
+    #Import css
+    CSS_PATH = "UI.css"
+
     def on_mount(self) -> None:
         self.title = "Flatline"
         self.sub_title = "System Administration"
