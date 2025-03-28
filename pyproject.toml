@@ -1,11 +1,15 @@
 [project]
-name = "ghost-monitor"
-description = "Ghost Monitor for job and system management"
+name = "flatline"
+description = "Flatline for job and system management"
 dynamic = ["version"]
 requires-python = ">= 3.11"
 dependencies = [
-  "textual>=2.1.2"
+  "textual>=3.0.0",
+  "textual-plotext>=1.0.1"
 ]
+
+[project.scripts]
+flatline = "flatline.main:main"
 
 [build-system]
 requires = ["setuptools >= 61.0", "setuptools-scm >= 8.2"]
